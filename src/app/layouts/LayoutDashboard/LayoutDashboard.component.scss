@@ -1,0 +1,30 @@
+.cabezado{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  margin: auto;
+  border-bottom: 0.15vw solid #6E6BB4;
+}
+.cabezado h1{
+  color: #6E6BB4;
+  font-size: 2vw;
+  margin: 0;
+  padding: 1vw 0;
+}
+.button{
+  display: flex;
+  gap: 1vw;
+}
+button{
+  font-size: 1.5vw;  
+  padding: 0.3vw 1vw;
+  border: 0.1vw solid gray;
+  color: #2E4D69;
+  cursor: pointer;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(203,224,249,1) 30%, rgba(194,219,248,1) 50%, rgba(204,225,249,1) 70%, rgba(255,255,255,1) 100%);
+}
+
+.info{
+  display: flex;
+}

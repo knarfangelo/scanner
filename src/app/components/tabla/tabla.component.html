@@ -1,0 +1,36 @@
+<!-- src/app/personas/personas.component.html -->
+<div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>DNI</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Nombres</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Dirección</th>
+          <th>Sexo</th>
+          <th>Estado Civil</th>
+          <th>Departamento</th>
+          <th>Provincia</th>
+          <th>Distrito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let persona of personas">
+          <td>{{ persona.dni }}</td>
+          <td>{{ persona.ap_PAT }}</td>
+          <td>{{ persona.ap_MAT }}</td>
+          <td>{{ persona.nombres }}</td>
+          <td>{{ persona.fecha_NAC }}</td>
+          <td>{{ persona.direccion }}</td>
+          <td>{{ persona.sexo }}</td>
+          <td>{{ persona.est_CIVIL }}</td>
+          <td>{{ persona.departamento }}</td>
+          <td>{{ persona.provincia }}</td>
+          <td>{{ persona.distrito }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

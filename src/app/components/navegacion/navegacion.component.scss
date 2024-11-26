@@ -1,0 +1,28 @@
+nav{
+  display: flex;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(85,79,211,1) 30%, rgba(9,0,191,1) 100%);
+  align-items: center;
+  font-size: 1vw;
+  height: 5vw;
+  gap: 1vw;
+}
+
+h1{
+  margin: 0;
+  padding: 0;
+  font-size: 2vw;
+  color: #fff;
+  text-shadow: 0.1vw 0.1vw 0.1vw #000; /* Sombra para el efecto 3D */
+ 
+}
+
+img{
+  height: 100%;
+}
+.tiempo{
+  margin-left: auto;
+  margin-right: 1vw;
+  font-size: 2.5vw;
+  color: #fff;
+  text-shadow: 0.1vw 0.1vw 0.1vw #000; /* Sombra para el efecto 3D */
+}
