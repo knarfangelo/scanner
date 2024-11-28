@@ -1,14 +1,14 @@
 export interface Persona {
-    dni: string;
-    ap_PAT?: string;
-    ap_MAT?: string;
-    nombres?: string;
-    fecha_NAC?: string;
-    direccion?: string;
-    sexo?: string;
-    est_CIVIL?: string;
-    departamento?: string;
-    provincia?: string;
-    distrito?: string;
-  }
-  
+  dni: string;
+  apPat?: string;
+  apMat?: string;
+  nombres?: string;
+  fechaNac?: string;
+  direccion?: string;
+  sexo?: string;
+  estCivil?: string;
+  departamento?: string;
+  provincia?: string;
+  distrito?: string;
+  celulares?: string[];
+}

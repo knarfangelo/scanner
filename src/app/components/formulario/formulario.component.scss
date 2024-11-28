@@ -4,25 +4,98 @@ header{
     margin: 1vw;
 }
 
+input[type="text" i]{
+    padding-block: 0;
+}
+
 form{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    overflow: auto;
     background-color: #DDDDFF;
+}
+input{
+    border: 0.1vw solid gray;
+    font-size: 1vw;
+    box-sizing: border-box;
+    padding: 0;
+    padding-left: 0.5vw ;
+    height: 1.5vw;
 }
 h4{
     margin: 0;
     font-size: 1.5vw;
-    border-bottom: 0.15vw solid #6E6BB4;
+    border-bottom: 0.2vw solid #6E6BB4;
     margin-bottom: 1vw;
 }
-label{
+h3{
+    margin: 0;
+    font-size: 1vw;
+    margin: 0.5vw 0;
+}
+.por-dni{
     font-size: 1vw;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.por-dni input{
+    border: 0.1vw solid gray;
+    width: 16vw;
+}
+
+.por-nacimiento{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.por-nacimiento label{
+    font-size: 1vw;
+    display: flex;
+    gap: 0.5vw;     
+    align-items: center;
+}
+.por-nacimiento label input{
+    width: 7.5vw;
+    height: 1.5vw;
+}
+.edad{
+    display: flex;
+    flex-direction: column;
+}
+.edad .l-fedad{
+    font-size: 1vw;
+}
+.anio{
+    font-size: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+.anio label{
+    display: flex;
     gap: 1vw;
 }
-input{
+.filtro-edad{
+    width: 100%;
+    height: 1.5vw;
     font-size: 1vw;
+    margin: 0;
+}
+.l-fedad{
+    display: flex;
+    flex-direction: column;
+}
+
+:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.datos-personales label{
+    display: flex;
+    flex-direction: column;
 }

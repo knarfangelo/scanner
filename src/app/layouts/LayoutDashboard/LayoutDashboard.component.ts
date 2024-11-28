@@ -4,6 +4,7 @@ import { FooterComponent } from "../../components/footer/footer.component";
 import { FormularioComponent } from "../../components/formulario/formulario.component";
 import { TablaComponent } from "../../components/tabla/tabla.component";
 import { PersonasService } from '../../services/Personas.service';
+import { FilterService } from '../../services/Filter.service';
 
 @Component({
   selector: 'app-layout-dashboard',
@@ -15,7 +16,7 @@ import { PersonasService } from '../../services/Personas.service';
     <div class="cabezado">
       <h1>Lista de Registros</h1>
       <div class="button">
-        <button>Filtrar</button>
+        <button (click)="applyFilters()">Filtrar</button>
         <button>Nueva Busqueda</button>
       </div>
     </div>
@@ -29,9 +30,15 @@ import { PersonasService } from '../../services/Personas.service';
   styleUrl: './LayoutDashboard.component.scss',
 })
 export class LayoutDashboardComponent {
-  constructor(private personasService: PersonasService) {
+  dni: string = '';  // Variable para almacenar el DNI ingresado
 
+
+  constructor(private filterService: FilterService) {}
+  
+  // Método para aplicar los filtros
+  applyFilters(): void {
+    console.log('Aplicando filtros...');
+    this.filterService.applyFilters();  // Llamamos al método para aplicar los filtros
   }
-
   
 }

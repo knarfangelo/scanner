@@ -6,12 +6,16 @@
     background-color: #DDDDFF;
     overflow: auto;
 }
+table{
+    border-spacing: 0;
+}
 h2{
     font-size: 2vw;
 }
 tr{
     width: 10vw;
 }
+
 th{
     font-size: 1.5vw;  
     border: 0.1vw solid gray;
@@ -20,8 +24,8 @@ th{
     background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(203,224,249,1) 30%, rgba(194,219,248,1) 50%, rgba(204,225,249,1) 70%, rgba(255,255,255,1) 100%);
 }
 th, td{
-    padding: 1vw;
-    font-size: 1.5vw;
+    padding: 0.5vw;
+    font-size: 1.0vw;
 }
 
 td{

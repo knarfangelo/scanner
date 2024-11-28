@@ -1,9 +1,86 @@
 <header>
-    <form (ngSubmit)="searchPersona()">
+  <form>
+    <section class="DNI">
       <h4>Búsqueda por DNI</h4>
-      <label for="dni">N° de DNI:
-        <input type="text" id="dni" [(ngModel)]="dni" name="dni" required>
+      <label class="por-dni" for="dni">N° de DNI:
+        <input type="text" id="dni" [(ngModel)]="dni" name="dni" (ngModelChange)="updateFilter()">
       </label>
-    </form>
+    </section>
+
+    <section class="fecha-nac">
+      <h4>Fecha de Nacimiento</h4>
+      <div for="anio" class="anio"><h3>Año de Nacimiento</h3>
+        <label for="">Año inicio
+          <input type="text" [(ngModel)]="anioInicio" name="anioInicio" (ngModelChange)="updateFilter()">
+        </label>
+        <label for="">Año Final
+          <input type="text" [(ngModel)]="anioFinal" name="anioFinal" (ngModelChange)="updateFilter()">
+        </label>
+      </div>
+      <h3>Rango de Mes nacimiento</h3>
+      <div class="por-nacimiento">
+        <label for="fechaMesDesde">Desde:
+          <input type="text" [(ngModel)]="fechaMesDesde" name="fechaMesDesde" (ngModelChange)="updateFilter()">
+        </label>
+        <label for="fechaMesHasta">Hasta:
+          <input type="text" [(ngModel)]="fechaMesHasta" name="fechaMesHasta" (ngModelChange)="updateFilter()">
+        </label>
+      </div>
+      <h3>Rango de Día nacimiento</h3>
+      <div class="por-nacimiento">
+        <label for="fechaDiaDesde">Desde:
+          <input type="text" [(ngModel)]="fechaDiaDesde" name="fechaDiaDesde" (ngModelChange)="updateFilter()">
+        </label>
+        <label for="fechaDiaHasta">Hasta:
+          <input type="text" [(ngModel)]="fechaDiaHasta" name="fechaDiaHasta" (ngModelChange)="updateFilter()">
+        </label>
+      </div>
+    </section>
+
+    <section class="edad">
+      <h4>Filtro de Edad</h4>
+      <label class="l-fedad" for="edad">Filtro de edad</label>
+      <input class="filtro-edad" type="text" [(ngModel)]="edad" name="edad" (ngModelChange)="updateFilter()">
+      <h3>Rango de edad</h3>
+      <div class="por-nacimiento">
+        <label for="edadDesde">Desde:
+          <input type="text" [(ngModel)]="edadDesde" name="edadDesde" (ngModelChange)="updateFilter()">
+        </label>
+        <label for="edadHasta">Hasta:
+          <input type="text" [(ngModel)]="edadHasta" name="edadHasta" (ngModelChange)="updateFilter()">
+        </label>
+      </div>
+    </section>
+
+    <section class="datos-personales">
+      <h4>Datos Personales</h4>
+      <label for="apPat"><h3>Apellido Paterno</h3>
+        <input type="text" [(ngModel)]="apPat" name="apPat" (ngModelChange)="updateFilter()">
+      </label>
+      <label for="apMat"><h3>Apellido Materno</h3>
+        <input type="text" [(ngModel)]="apMat" name="apMat" (ngModelChange)="updateFilter()">
+      </label>
+      <label for="nombres"><h3>Nombres</h3>
+        <input type="text" [(ngModel)]="nombres" name="nombres" (ngModelChange)="updateFilter()">
+      </label>
+      <label for="direccion"><h3>Dirección</h3>
+        <input type="text" [(ngModel)]="direccion" name="direccion" (ngModelChange)="updateFilter()">
+      </label>
+      <label for="sexo"><h3>Sexo</h3>
+        <input type="text" [(ngModel)]="sexo" name="sexo" (ngModelChange)="updateFilter()">
+      </label>
+      <label for="estCivil"><h3>Estado Civil</h3>
+        <input type="text" [(ngModel)]="estCivil" name="estCivil" (ngModelChange)="updateFilter()">
+      </label>
+      <label for="departamento"><h3>Departamento</h3>
+        <input type="text" [(ngModel)]="departamento" name="departamento" (ngModelChange)="updateFilter()">
+      </label>
+      <label for="provincia"><h3>Provincia</h3>
+        <input type="text" [(ngModel)]="provincia" name="provincia" (ngModelChange)="updateFilter()">
+      </label>
+      <label for="distrito"><h3>Distrito</h3>
+        <input type="text" [(ngModel)]="distrito" name="distrito" (ngModelChange)="updateFilter()">
+      </label>
+    </section>
+  </form>                           
 </header>
-  

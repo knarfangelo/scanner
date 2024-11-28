@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Persona } from '../interfaces/Persona';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -8,47 +8,21 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class PersonasService {
 
-  private apiUrl = 'http://localhost:8080/personas';  // URL de la API
-
-  // Observables para almacenar las personas y la persona buscada por DNI
-  private personasSubject = new BehaviorSubject<Persona[]>([]);
-  private personaSubject = new BehaviorSubject<Persona | null>(null);
-
-  personas$ = this.personasSubject.asObservable();
-  persona$ = this.personaSubject.asObservable();
-
-  // Evento que se activa al presionar el botón de búsqueda
-  private searchDniSubject = new BehaviorSubject<string>('');
-  searchDni$ = this.searchDniSubject.asObservable();
+  private baseUrl = 'http://localhost:8080/personas/filtered'; // Cambia por tu base URL
 
   constructor(private http: HttpClient) {}
 
-  // Método para obtener todas las personas
-  getAllPersonas(): void {
-    this.http.get<Persona[]>(this.apiUrl).subscribe(
-      (personas) => this.personasSubject.next(personas),
-      (error) => this.personasSubject.next([])
-    );
-  }
+  getFilteredPersonas(filters: any, page: number, limit: number): Observable<any> {
+    let params = new HttpParams().set('page', page.toString()).set('limit', limit.toString());
 
-// Método para obtener una persona por DNI
-getPersonaByDNI(dni: string): void {
-  this.http.get<Persona>(`${this.apiUrl}/${dni}`).subscribe(
-    (persona) => {
-      this.personasSubject.next([persona]);  // Actualizamos personasSubject con un arreglo que contiene solo esa persona
-      console.log('Persona obtenida con DNI:', persona);
-    },
-    (error) => {
-      this.personasSubject.next([]); // Si ocurre un error, emitimos un arreglo vacío
-    }
-  );
-}
+    // Agregar filtros dinámicos
+    Object.keys(filters).forEach(key => {
+      if (filters[key]) {
+        params = params.set(key, filters[key]);
+      }
+    });
 
-  
-
-  // Método para actualizar el evento de búsqueda
-  searchPersona(dni: string): void {
-    this.searchDniSubject.next(dni);  // Emite el DNI a todos los componentes suscritos
+    return this.http.get(this.baseUrl, { params });
   }
 
 }
