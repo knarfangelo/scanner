@@ -16,15 +16,19 @@
   display: flex;
   gap: 1vw;
 }
-button{
-  font-size: 1.5vw;  
+button, a{
+  font-size: 1.5vw;
+  text-decoration: none;
   padding: 0.3vw 1vw;
   border: 0.1vw solid gray;
   color: #2E4D69;
   cursor: pointer;
   background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(203,224,249,1) 30%, rgba(194,219,248,1) 50%, rgba(204,225,249,1) 70%, rgba(255,255,255,1) 100%);
 }
-
+.salir{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgb(249, 203, 203) 30%, rgb(248, 194, 194) 50%, rgb(249, 204, 204) 70%, rgba(255,255,255,1) 100%);
+  
+}
 .info{
   display: flex;
 }

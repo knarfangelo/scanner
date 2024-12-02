@@ -1,4 +1,3 @@
-import { FetchBackend } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
@@ -7,7 +6,8 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class FilterService {
-  private filtersSubject = new BehaviorSubject<any>({
+  // Filtro normal que almacena los valores sin ser reactivo
+  private filters: any = {
     dni: '', // Filtro de ejemplo
     apPat: '',
     apMat: '',
@@ -20,22 +20,43 @@ export class FilterService {
     provincia: '',
     distrito: '',
     fechaInicial: '',
-    fechaFinal:''
-  });
+    page: 1, // Página actual
+    limit: 100, // Registros por página
+    totalElements: 0 // Total de registros
+  };
 
-  filters$ = this.filtersSubject.asObservable();
+  // Filtro reactivo (BehaviorSubject)
+  private filtersSubject: BehaviorSubject<any> = new BehaviorSubject<any>(this.filters);
+  filters$ = this.filtersSubject.asObservable(); // Exponer el filtro reactivo como un observable
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
-  // Establecer los filtros desde el formulario
-  setFilters(filters: any): void {
-    this.filtersSubject.next(filters);
-    this.updateUrl(filters); // Actualiza la URL con los filtros
+  // Obtener los filtros actuales (filtro no reactivo)
+  getFilters(): any {
+    return this.filters;
   }
 
-  // Obtener los filtros actuales
-  getFilters(): any {
+  // Obtener la versión reactiva de los filtros
+  getReactiveFilters(): any {
     return this.filtersSubject.value;
+  }
+
+  // Guardar los filtros (filtro no reactivo)
+  saveFilters(filters: any): void {
+    this.filters = { ...filters }; // Guarda los filtros sin aplicar los cambios
+  }
+
+  // Actualizar los filtros reactivos con los valores del filtro normal
+  updateReactiveFilters(): void {
+    this.filtersSubject.next({ ...this.filters }); // Actualiza el BehaviorSubject con el filtro actual
+  }
+
+  // Aplicar los filtros (esto incluye actualizar la URL y ejecutar otras acciones)
+  applyFilters(): void {
+    this.updateUrl(this.filters); // Actualiza la URL con los filtros
+
+    // Aquí puedes realizar cualquier acción adicional para aplicar los filtros
+    console.log('Filtros aplicados:', this.filters);
   }
 
   // Actualizar la URL con los filtros
@@ -49,7 +70,7 @@ export class FilterService {
 
   // Recuperar los filtros desde la URL
   setFiltersFromUrl(params: any): void {
-    const filters = {
+    this.filters = {
       dni: params['dni'] || '',
       apPat: params['apPat'] || '',
       apMat: params['apMat'] || '',
@@ -63,44 +84,21 @@ export class FilterService {
       distrito: params['distrito'] || '',
       fechaInicial: params['fechaInicial'] || '',
       fechaFinal: params['fechaFinal'] || '',
+      page: params['page'] || 1, // Recuperar número de página
+      limit: params['limit'] || 100, // Recuperar tamaño de página
     };
-    this.filtersSubject.next(filters);
+    this.updateReactiveFilters();  // Actualiza los filtros reactivos con los nuevos valores
   }
 
-  // Agregar o actualizar un filtro específico
+  // Agregar o actualizar un filtro específico (en el filtro normal y reactivo)
   addOrUpdateFilter(param: string, value: string): void {
-    const currentFilters = this.getFilters();
-    currentFilters[param] = value; // Actualiza el filtro en la lista
-    this.setFilters(currentFilters); // Actualiza los filtros y la URL
+    this.filters[param] = value; // Actualiza el filtro en el filtro normal
+    this.saveFilters(this.filters); // Guarda los filtros (incluyendo el reactivo)
   }
 
   // Eliminar un filtro específico
   removeFilter(param: string): void {
-    const currentFilters = this.getFilters();
-    delete currentFilters[param];
-    this.setFilters(currentFilters);
+    delete this.filters[param]; // Elimina el filtro del filtro normal
+    this.saveFilters(this.filters); // Guarda los filtros (incluyendo el reactivo)
   }
-  applyFilters(): void {
-    const currentFilters = this.getFilters();
-    console.log('Filtros aplicados:', currentFilters);
-  
-    // Si quieres aplicar todos los filtros de alguna manera, por ejemplo:
-    Object.keys(currentFilters).forEach(key => {
-      if (currentFilters[key]) {
-        // Llamar a addOrUpdateFilter si deseas modificar alguno de los filtros
-        this.addOrUpdateFilter(key, currentFilters[key]);
-      }
-    });
-  }
-
-  updateFilterFields(updatedFields: any): void {
-    const currentFilters = this.getFilters();
-    // Actualiza los filtros existentes con los valores proporcionados
-    Object.keys(updatedFields).forEach((key) => {
-      if (updatedFields[key] !== undefined) {
-        currentFilters[key] = updatedFields[key];
-      }
-    });
-  }
-
 }

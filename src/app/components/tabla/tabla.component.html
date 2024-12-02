@@ -1,16 +1,32 @@
 <div class="container">
-  <div *ngIf="isLoading" class="loading-overlay">
+  @if (isLoading) {
+  <div class="loading-overlay">
     <div class="spinner"></div>
-    <p>Cargando...</p>
   </div>
-  <table class="table table-bordered" *ngIf="!isLoading">
+  }
+  @if (!isLoading) {
+    <div class="datos-consulta">
+      <h4>Total de datos de la consulta : {{formatNumberToHundreds(totalRecords)}}</h4>
+      <div class="pagination">
+        <button *ngFor="let page of pageButtons"
+                [disabled]="page === filters.page || page === -1"
+                (click)="goToPage(page)"
+                [ngClass]="{'active': page === activePage}">
+          {{ page === -1 ? '...' : page }}
+        </button>
+      </div>      
+    </div>
+  <table class="table table-bordered">
+
     <thead>
       <tr class="titulares">
+        <th>#</th> <!-- Nueva columna para el contador -->
         <th>DNI</th>
         <th>Apellido Paterno</th>
         <th>Apellido Materno</th>
         <th>Nombres</th>
         <th>Fecha de Nacimiento</th>
+        <th>Edad</th>
         <th>Dirección</th>
         <th>Sexo</th>
         <th>Estado Civil</th>
@@ -21,20 +37,29 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let persona of personas">
+      @for (persona of personas; track $index; let i = $index) {
+      <tr>
+        <td class="index">{{ (filters.page - 1) * 100 + i + 1 }}</td>
         <td>{{ persona.dni }}</td>
         <td>{{ persona.apPat }}</td>
         <td>{{ persona.apMat }}</td>
         <td>{{ persona.nombres }}</td>
-        <td>{{ persona.fechaNac }}</td>
+        <td>{{ convertirFecha(persona.fechaNac ?? '')}}</td>
+        <td>{{ calcularEdad(persona.fechaNac ?? '') }}</td>
         <td>{{ persona.direccion }}</td>
-        <td>{{ persona.sexo }}</td>
+        <td>{{ persona.sexo === '1' ? 'Hombre' : 'Mujer' }}</td>
         <td>{{ persona.estCivil }}</td>
         <td>{{ persona.departamento }}</td>
         <td>{{ persona.provincia }}</td>
         <td>{{ persona.distrito }}</td>
-        <td>{{ persona.celulares }}</td>
+        <td>
+        @for (celular of persona.celulares; track $index) {
+          {{ celular }}
+        }
+        </td>
       </tr>
+      }
     </tbody>
   </table>
+  }
 </div>

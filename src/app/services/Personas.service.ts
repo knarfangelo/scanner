@@ -12,17 +12,19 @@ export class PersonasService {
 
   constructor(private http: HttpClient) {}
 
+// PersonasService
   getFilteredPersonas(filters: any, page: number, limit: number): Observable<any> {
-    let params = new HttpParams().set('page', page.toString()).set('limit', limit.toString());
+  let params = new HttpParams().set('page', page.toString()).set('limit', limit.toString());
 
-    // Agregar filtros dinámicos
-    Object.keys(filters).forEach(key => {
-      if (filters[key]) {
-        params = params.set(key, filters[key]);
-      }
-    });
+  // Agregar filtros dinámicos
+  Object.keys(filters).forEach(key => {
+    if (filters[key]) {
+      params = params.set(key, filters[key]);
+    }
+  });
 
-    return this.http.get(this.baseUrl, { params });
-  }
+  return this.http.get<any>(this.baseUrl, { params });
+}
+
 
 }

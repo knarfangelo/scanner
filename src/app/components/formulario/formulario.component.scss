@@ -46,7 +46,7 @@ h3{
 }
 .por-dni input{
     border: 0.1vw solid gray;
-    width: 16vw;
+    width: 14vw;
 }
 
 .por-nacimiento{
@@ -61,7 +61,7 @@ h3{
     align-items: center;
 }
 .por-nacimiento label input{
-    width: 7.5vw;
+    width: 6.5vw;
     height: 1.5vw;
 }
 .edad{
@@ -69,24 +69,16 @@ h3{
     flex-direction: column;
 }
 .edad .l-fedad{
-    font-size: 1vw;
+    font-size: 1.0vw;
 }
-.anio{
-    font-size: 1vw;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5vw;
-}
-.anio label{
-    display: flex;
-    gap: 1vw;
-}
+
 .filtro-edad{
     width: 100%;
     height: 1.5vw;
     font-size: 1vw;
     margin: 0;
 }
+
 .l-fedad{
     display: flex;
     flex-direction: column;
@@ -98,4 +90,61 @@ h3{
 .datos-personales label{
     display: flex;
     flex-direction: column;
+}
+.sexo-select{
+    font-size: 1vw;
+    border: 0.1vw solid gray;
+    border-radius: 0vw;
+    font-size: 1vw;
+    padding: 0.2vw 0;
+    background: #fff;
+}
+.civil-select{
+    font-size: 1vw;
+    border: 0.1vw solid gray;
+    border-radius: 0vw;
+    font-size: 1vw;
+    padding: 0.2vw 0;
+    background: #fff;
+}
+.desactivado {
+    opacity: 0.5; /* Reduce la opacidad para mostrar que está desactivado */
+  }
+  
+  input:disabled {
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    cursor: not-allowed; /* Cambia el cursor para mostrar que no se puede interactuar */
+  }
+
+  .opciones-busqueda{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .opciones-busqueda label{
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    cursor: pointer;
+  }
+  .opciones-busqueda label input{
+    width: 2vw;
+    border: 0;
+  }
+.anio label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.title{
+    width: 7vw;
+}
+.title:first-child{
+    margin: 0.5vw 0;
+}
+.anio label input{
+    width: 17vw;
 }

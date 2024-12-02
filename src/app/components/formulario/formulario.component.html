@@ -7,47 +7,67 @@
       </label>
     </section>
 
-    <section class="fecha-nac">
+    <!-- Radio buttons para seleccionar la sección activa -->
+    <section class="opciones-busqueda">
+      <label>
+        <input type="radio" name="filtro" [(ngModel)]="filtroActivo" value="fechaNac" (change)="updateFilter()">
+        Por Fecha
+      </label>
+      <label>
+        <input type="radio" name="filtro" [(ngModel)]="filtroActivo" value="edad" (change)="updateFilter()">
+        Por Edad
+      </label>
+    </section>
+
+    <!-- Sección de Fecha de Nacimiento -->
+    <section class="fecha-nac" [class.desactivado]="filtroActivo !== 'fechaNac'">
       <h4>Fecha de Nacimiento</h4>
       <div for="anio" class="anio"><h3>Año de Nacimiento</h3>
-        <label for="">Año inicio
-          <input type="text" [(ngModel)]="anioInicio" name="anioInicio" (ngModelChange)="updateFilter()">
+        <label for=""><div class="title">Año inicio</div>
+          <input type="text" [(ngModel)]="anioInicio" name="anioInicio" (ngModelChange)="updateFilter()" [disabled]="filtroActivo !== 'fechaNac'">
         </label>
-        <label for="">Año Final
-          <input type="text" [(ngModel)]="anioFinal" name="anioFinal" (ngModelChange)="updateFilter()">
+        <label for=""><div class="title">Año Final</div>
+          <input type="text" [(ngModel)]="anioFinal" name="anioFinal" (ngModelChange)="updateFilter()" [disabled]="filtroActivo !== 'fechaNac'">
         </label>
       </div>
       <h3>Rango de Mes nacimiento</h3>
       <div class="por-nacimiento">
         <label for="fechaMesDesde">Desde:
-          <input type="text" [(ngModel)]="fechaMesDesde" name="fechaMesDesde" (ngModelChange)="updateFilter()">
+          <input type="text" [(ngModel)]="fechaMesDesde" name="fechaMesDesde" (ngModelChange)="updateFilter()" [disabled]="filtroActivo !== 'fechaNac'">
         </label>
         <label for="fechaMesHasta">Hasta:
-          <input type="text" [(ngModel)]="fechaMesHasta" name="fechaMesHasta" (ngModelChange)="updateFilter()">
+          <input type="text" [(ngModel)]="fechaMesHasta" name="fechaMesHasta" (ngModelChange)="updateFilter()" [disabled]="filtroActivo !== 'fechaNac'">
         </label>
       </div>
       <h3>Rango de Día nacimiento</h3>
       <div class="por-nacimiento">
         <label for="fechaDiaDesde">Desde:
-          <input type="text" [(ngModel)]="fechaDiaDesde" name="fechaDiaDesde" (ngModelChange)="updateFilter()">
+          <input type="text" [(ngModel)]="fechaDiaDesde" name="fechaDiaDesde" (ngModelChange)="updateFilter()" [disabled]="filtroActivo !== 'fechaNac'">
         </label>
         <label for="fechaDiaHasta">Hasta:
-          <input type="text" [(ngModel)]="fechaDiaHasta" name="fechaDiaHasta" (ngModelChange)="updateFilter()">
+          <input type="text" [(ngModel)]="fechaDiaHasta" name="fechaDiaHasta" (ngModelChange)="updateFilter()" [disabled]="filtroActivo !== 'fechaNac'">
         </label>
       </div>
     </section>
 
-    <section class="edad">
+    <!-- Sección de Edad -->
+    <section class="edad" [class.desactivado]="filtroActivo !== 'edad'">
       <h4>Filtro de Edad</h4>
       <label class="l-fedad" for="edad">Filtro de edad</label>
-      <input class="filtro-edad" type="text" [(ngModel)]="edad" name="edad" (ngModelChange)="updateFilter()">
+      <select class="filtro-edad" name="edad"  [(ngModel)]="edadSeleccionada" (change)="updateFilterEdad()" [disabled]="filtroActivo !== 'edad'">
+        <option value="">Seleccione una opción</option>
+        <option value="adulto">Adulto joven (18-35)</option>
+        <option value="maduro">Adulto maduro (36-60)</option>
+        <option value="mayor">Tercera Edad (61+)</option>
+      </select>
+
       <h3>Rango de edad</h3>
       <div class="por-nacimiento">
         <label for="edadDesde">Desde:
-          <input type="text" [(ngModel)]="edadDesde" name="edadDesde" (ngModelChange)="updateFilter()">
+          <input type="text" [(ngModel)]="edadDesde" name="edadDesde" (ngModelChange)="updateFilter()" [disabled]="filtroActivo !== 'edad'">
         </label>
         <label for="edadHasta">Hasta:
-          <input type="text" [(ngModel)]="edadHasta" name="edadHasta" (ngModelChange)="updateFilter()">
+          <input type="text" [(ngModel)]="edadHasta" name="edadHasta" (ngModelChange)="updateFilter()" [disabled]="filtroActivo !== 'edad'">
         </label>
       </div>
     </section>
@@ -67,13 +87,28 @@
         <input type="text" [(ngModel)]="direccion" name="direccion" (ngModelChange)="updateFilter()">
       </label>
       <label for="sexo"><h3>Sexo</h3>
-        <input type="text" [(ngModel)]="sexo" name="sexo" (ngModelChange)="updateFilter()">
-      </label>
-      <label for="estCivil"><h3>Estado Civil</h3>
-        <input type="text" [(ngModel)]="estCivil" name="estCivil" (ngModelChange)="updateFilter()">
-      </label>
+        <select class="sexo-select" [(ngModel)]="sexo" name="sexo" (ngModelChange)="updateFilter()">
+          <option value="" disabled selected>Seleccione...</option> <!-- Opción por defecto, vacía -->
+          <option value="1">Hombre</option>
+          <option value="2">Mujer</option>
+          <option value="">Todos</option>
+        </select>
+      </label>      
+      <label for="estCivil">
+        <h3>Estado Civil</h3>
+        <select class="civil-select" [(ngModel)]="estCivil" name="estCivil" (ngModelChange)="updateFilter()">
+          <option value="">Seleccione...</option>
+          <option value="SOLTERO">Soltero</option>
+          <option value="CASADO">Casado</option>
+          <option value="VIUDO">Viudo</option>
+          <option value="DIVORCIADO">Divorciado</option>
+          <option value="">Todos</option>
+        </select>
+      </label>      
       <label for="departamento"><h3>Departamento</h3>
-        <input type="text" [(ngModel)]="departamento" name="departamento" (ngModelChange)="updateFilter()">
+      <select class="civil-select" id="departamento" [(ngModel)]="departamento" name="departamento" (change)="updateFilter()">
+        <option *ngFor="let dep of departamentos" [value]="dep.name">{{ dep.name }}</option>
+      </select>      
       </label>
       <label for="provincia"><h3>Provincia</h3>
         <input type="text" [(ngModel)]="provincia" name="provincia" (ngModelChange)="updateFilter()">
