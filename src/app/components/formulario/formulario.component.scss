@@ -8,6 +8,7 @@ input[type="text" i]{
     padding-block: 0;
 }
 
+
 form{
     width: 100%;
     height: 100%;
@@ -17,7 +18,7 @@ form{
     flex-direction: column;
     gap: 1vw;
     overflow: auto;
-    background-color: #DDDDFF;
+    background-color: #fff;
 }
 input{
     border: 0.1vw solid gray;
@@ -30,7 +31,7 @@ input{
 h4{
     margin: 0;
     font-size: 1.5vw;
-    border-bottom: 0.2vw solid #6E6BB4;
+    border-bottom: 0.2vw solid red;
     margin-bottom: 1vw;
 }
 h3{
@@ -70,6 +71,7 @@ h3{
 }
 .edad .l-fedad{
     font-size: 1.0vw;
+    font-weight: bold;
 }
 
 .filtro-edad{

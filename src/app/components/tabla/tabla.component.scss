@@ -3,7 +3,7 @@
     margin-left: 0;
     width: 72vw;
     height: calc(100vh - 14vw);
-    background-color: #DDDDFF;
+    background-color: #fff;
     overflow: auto;
 }
 .index{
@@ -11,6 +11,10 @@
 }
 table{
     border-spacing: 0;
+}
+.michi{
+  font-weight: 900;
+  font-size: 1.5vw;
 }
 h2{
     font-size: 2vw;
@@ -30,9 +34,9 @@ tr{
 th{
     font-size: 1.5vw;  
     border: 0.1vw solid gray;
-    color: #2E4D69;
+    color: #fff;
     cursor: pointer;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 1%, rgba(203,224,249,1) 30%, rgba(194,219,248,1) 50%, rgba(204,225,249,1) 70%, rgba(255,255,255,1) 100%);
+    background: #de1a22
 }
 th, td{
     padding: 0.5vw;
@@ -63,7 +67,7 @@ td{
   /* Estilos del spinner */
   .spinner {
     border: 8px solid #f3f3f3; /* Color de fondo del aro */
-    border-top: 8px solid #3498db; /* Color del aro que gira */
+    border-top: 8px solid #bf161c; /* Color del aro que gira */
     border-radius: 50%;
     width: 50px; /* Tamaño del aro */
     height: 50px; /* Tamaño del aro */
@@ -74,7 +78,7 @@ td{
     display: flex;
     position: fixed;
     margin-left: 43vw;
-    background-color: #DDDDFF;
+    background-color: rgb(249, 203, 203);
   }
  /* Clase para los botones */
 .pagination button {
@@ -86,7 +90,7 @@ td{
   
   /* Clase para el botón activo */
   .pagination button.active {
-    background-color: #007bff;
+    background-color: red;
     color: #fff;
   }
   

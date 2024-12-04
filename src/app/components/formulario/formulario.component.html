@@ -53,7 +53,7 @@
     <!-- Sección de Edad -->
     <section class="edad" [class.desactivado]="filtroActivo !== 'edad'">
       <h4>Filtro de Edad</h4>
-      <label class="l-fedad" for="edad">Filtro de edad</label>
+      <label class="l-fedad" for="edad">Rangos</label>
       <select class="filtro-edad" name="edad"  [(ngModel)]="edadSeleccionada" (change)="updateFilterEdad()" [disabled]="filtroActivo !== 'edad'">
         <option value="">Seleccione una opción</option>
         <option value="adulto">Adulto joven (18-35)</option>

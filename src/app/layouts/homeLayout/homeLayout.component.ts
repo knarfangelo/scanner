@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
     <app-navegacion></app-navegacion>
     <header>
       <h1>Departamento</h1>
-      <p>Escoja un departamento para empezar</p>
+      <p>para empezar</p>
       
       <select class="select-departamento" [(ngModel)]="departamentoSeleccionado" (change)="aplicarFiltro()">
         <option value="" disabled selected>Seleccione un departamento</option>

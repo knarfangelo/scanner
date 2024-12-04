@@ -19,8 +19,8 @@ export class FormularioComponent {
 
     edadSeleccionada: string = '';
     filtroActivo: string = 'fechaNac';  // Por defecto, se activa la búsqueda por fecha de nacimiento
-    anioInicio: string = '1000';
-    anioFinal: string = '3000';
+    anioInicio: string = '1900';
+    anioFinal: string = '2024';
     fechaMesDesde: string = '1';
     fechaMesHasta: string = '12';
     fechaDiaDesde: string = '1';

@@ -4,8 +4,8 @@ header{
 }
 
 h1{
-  color: #6E6BB4;
-  border-bottom: 0.15vw solid #6E6BB4;
+  color: #000;
+  border-bottom: 0.15vw solid #000;
   font-size: 2vw;
   margin: 0;
   padding: 1vw 0;
@@ -24,15 +24,18 @@ p{
   box-sizing: border-box;
   padding: 0;
   height: 3vw;
-  border: 0.15vw solid #6E6BB4;
+  border: 0.15vw solid #fff;
 }
 
 .empezar{
   width: 26vw;
   height: 3vw;
-  background-color: #6E6BB4;
+  background-color: #bf161c;
+  font-weight: bold;
   font-size: 1vw;
   color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
   border: 0;
   border-radius: 0.5vw;
   cursor: pointer;

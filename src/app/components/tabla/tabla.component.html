@@ -6,7 +6,7 @@
   }
   @if (!isLoading) {
     <div class="datos-consulta">
-      <h4>Total de datos de la consulta : {{formatNumberToHundreds(totalRecords)}}</h4>
+      <h4>Total de registros = {{formatNumberToHundreds(totalRecords)}}</h4>
       <div class="pagination">
         <button *ngFor="let page of pageButtons"
                 [disabled]="page === filters.page || page === -1"
@@ -20,7 +20,7 @@
 
     <thead>
       <tr class="titulares">
-        <th>#</th> <!-- Nueva columna para el contador -->
+        <th class="michi">#</th> <!-- Nueva columna para el contador -->
         <th>DNI</th>
         <th>Apellido Paterno</th>
         <th>Apellido Materno</th>

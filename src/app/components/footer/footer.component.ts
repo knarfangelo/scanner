@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   template: `
     <footer>
-      Copyrigth &copy; 2024 - Todos los derechos reservados SCD
+      Copyrigth &copy; 2024  ACCIÓN POPULAR
       <div class="tiempo">{{ currentTime }}</div>
     </footer>
   `,

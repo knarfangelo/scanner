@@ -6,8 +6,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   template: `
     <nav class="title-bar">
-      <img class="icon" src="icon.svg" alt="">
-      <h1 class="title-bar-text">SCD - Sistema de Contacto Directo</h1>
+      <img class="icon" src="lampa-ap.png" alt="">
+      <h1 class="title-bar-text">BIG DATA NACIONAL</h1>
     </nav>
   `,
   styleUrl: './navegacion.component.scss',
