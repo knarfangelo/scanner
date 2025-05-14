@@ -17,7 +17,8 @@ import { LoadingService } from '../../services/Loading.service';  // Importamos 
 export class TablaComponent implements OnInit {
   personas: Persona[] = [];  // Aquí guardamos las personas filtradas
   filters: any = {
-    page: 1
+    page: 1,
+    limit: 100
   };  // Aquí guardamos los filtros
   page = 1
   activePage: number = 1; // Página activa (por defecto la página 1)
@@ -27,9 +28,6 @@ export class TablaComponent implements OnInit {
   totalPages: number = 0; // Total de páginas
   pageButtons: number[] = []; // Botones visibles en la paginación
   maxVisibleButtons: number = 3; // Número máximo de botones visibles (antes de "...")
-
-
-
 
   constructor(
     private filterService: FilterService,
@@ -82,6 +80,7 @@ export class TablaComponent implements OnInit {
     this.personasService.getFilteredPersonas(this.filters, page, limit).subscribe({
       next: (data) => {
         this.personas = data.content;
+        this.filterService.saveInfoFilters(data.content);
         this.totalRecords = data.totalElements;
         this.totalPages = Math.ceil(this.totalRecords / limit); // Calcular total de páginas
         this.generatePageButtons(); // Generar los botones visibles
@@ -93,7 +92,8 @@ export class TablaComponent implements OnInit {
       },
     });
   }
-  
+
+
 
   calcularEdad(fechaNac: string): number {
     const fechaNacimiento = new Date(fechaNac);
@@ -154,8 +154,6 @@ export class TablaComponent implements OnInit {
     this.fetchFilteredPersonas();
   }
 
-  
-  
   formatNumberToHundreds(number: number): string {
     return number.toLocaleString('en-US'); // Usa el separador de miles (coma) por defecto en el formato en-US
   }

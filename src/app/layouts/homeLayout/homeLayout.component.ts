@@ -14,12 +14,8 @@ import { FormsModule } from '@angular/forms';
   template: `
     <app-navegacion></app-navegacion>
     <header>
-      <h1>Departamento</h1>
-      <p>para empezar</p>
-      
       <select class="select-departamento" [(ngModel)]="departamentoSeleccionado" (change)="aplicarFiltro()">
-        <option value="" disabled selected>Seleccione un departamento</option>
-        <option value="">TODO EL PERÚ</option>
+        <option class="todo-peru" value="">TODO EL PERÚ</option>
         <option *ngFor="let departamento of departamentos" [value]="departamento.name">{{departamento.name}}</option>
       </select>
   
@@ -40,14 +36,29 @@ export class HomeLayoutComponent {
 
   // Método para aplicar el filtro cuando se selecciona un departamento
   aplicarFiltro() {
+    const filters = {
+      dni: "",
+      apPat: "",
+      apMat: "",
+      nombres: "",
+      fechaNac: "",
+      direccion: "",
+      sexo: "",
+      estCivil: "",
+      departamento: this.departamentoSeleccionado,
+      provincia: "",
+      distrito: "",
+      fechaInicial: "",
+      fechaFinal:"",
+      page: 1,
+      limit: 100
+    };
     if (this.departamentoSeleccionado !== 'peru') {
-      const filters = {
-        departamento: this.departamentoSeleccionado,
-      };
-
       // Llamar al servicio de filtros para aplicar el filtro
       this.filterService.saveFilters(filters);
+      console.log(this.filterService.getFilters);
       this.filterService.updateReactiveFilters();
+      this.filterService.applyFilters();
       
       console.log('Filtro aplicado para departamento:', this.departamentoSeleccionado);
     }

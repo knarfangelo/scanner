@@ -5,6 +5,7 @@ import { FormularioComponent } from "../../components/formulario/formulario.comp
 import { TablaComponent } from "../../components/tabla/tabla.component";
 import { FilterService } from '../../services/Filter.service';
 import { RouterLink } from '@angular/router';
+import { PersonasService } from '../../services/Personas.service';
 
 @Component({
   selector: 'app-layout-dashboard',
@@ -18,7 +19,7 @@ import { RouterLink } from '@angular/router';
       <div class="button">
         <button (click)="applyFilters()">Filtrar</button>
         <a  href="/dashboard" (click)="reset()" >Resetear</a>
-        <a href="" class="salir"> SALIR </a>
+        <a href="/" class="salir"> SALIR </a>
       </div>
     </div>
   </header>
@@ -34,13 +35,17 @@ export class LayoutDashboardComponent {
   dni: string = '';  // Variable para almacenar el DNI ingresado
 
 
-  constructor(private filterService: FilterService) {}
+  constructor(private filterService: FilterService, personasService:PersonasService) {}
   
   // Método para aplicar los filtros
   applyFilters(): void {
     console.log('Aplicando filtros...');
     this.filterService.updateReactiveFilters();  // Llamamos al método para aplicar los filtros
   }
+
+  
+  
+
 
   filters = {
     dni: "",
@@ -54,15 +59,16 @@ export class LayoutDashboardComponent {
     departamento: "",
     provincia: "",
     distrito: "",
-    // Aquí puedes agregar los filtros adicionales si es necesario
     fechaInicial: "",
     fechaFinal:"",
-
+    page: 1,
+    limit: 100
   };
 
   reset(){
     this.filterService.saveFilters(this.filters);
     this.filterService.applyFilters();
+    this.filterService.updateReactiveFilters();
     this.filterService.updateUrl("/");
   }
 

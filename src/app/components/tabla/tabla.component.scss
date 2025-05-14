@@ -33,10 +33,10 @@ tr{
 }
 th{
     font-size: 1.5vw;  
-    border: 0.1vw solid gray;
+    border: 0.1vw solid #fff;
     color: #fff;
     cursor: pointer;
-    background: #de1a22
+    background: #243E73
 }
 th, td{
     padding: 0.5vw;
@@ -67,7 +67,7 @@ td{
   /* Estilos del spinner */
   .spinner {
     border: 8px solid #f3f3f3; /* Color de fondo del aro */
-    border-top: 8px solid #bf161c; /* Color del aro que gira */
+    border-top: 8px solid #243E73; /* Color del aro que gira */
     border-radius: 50%;
     width: 50px; /* Tamaño del aro */
     height: 50px; /* Tamaño del aro */
@@ -78,7 +78,7 @@ td{
     display: flex;
     position: fixed;
     margin-left: 43vw;
-    background-color: rgb(249, 203, 203);
+    background-color: #3064d4;
   }
  /* Clase para los botones */
 .pagination button {
@@ -87,10 +87,16 @@ td{
     border: 1px solid #fff;
     cursor: pointer;
   }
+
+  .pagination button:disabled {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      background-color: inherit;
+  }
   
   /* Clase para el botón activo */
   .pagination button.active {
-    background-color: red;
+    background-color: #243E73;
     color: #fff;
   }
   

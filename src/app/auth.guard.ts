@@ -6,22 +6,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  
   constructor(private router: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    // Verificar si el usuario está logeado (esto puede ser más avanzado, pero por ahora lo verificamos en el componente Login)
-    const userLoggedIn = localStorage.getItem('isLoggedIn') === 'true';  // Comprobamos el valor de 'isLoggedIn' en localStorage
+    const userLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    
+    console.log('User logged in: ', userLoggedIn);  // Verifica si se obtiene correctamente el valor de isLoggedIn
     
     if (userLoggedIn) {
-      return true;  // Si está logeado, permitimos el acceso a la ruta.
+      return true;
     } else {
-      // Si no está logeado, redirigimos al login
-      this.router.navigate(['/login']);
-      return false;  // Denegamos el acceso a la ruta.
+      this.router.navigate(['/']);
+      return false;
     }
   }
 }

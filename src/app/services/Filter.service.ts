@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { Persona } from '../interfaces/Persona';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,8 @@ export class FilterService {
     limit: 100, // Registros por página
     totalElements: 0 // Total de registros
   };
+
+  private listaFiltrados:Persona[] = [];
 
   // Filtro reactivo (BehaviorSubject)
   private filtersSubject: BehaviorSubject<any> = new BehaviorSubject<any>(this.filters);
@@ -100,5 +103,10 @@ export class FilterService {
   removeFilter(param: string): void {
     delete this.filters[param]; // Elimina el filtro del filtro normal
     this.saveFilters(this.filters); // Guarda los filtros (incluyendo el reactivo)
+  }
+
+  saveInfoFilters(listaFiltrados:Persona[]){
+    this.listaFiltrados = listaFiltrados;
+    console.log(this.listaFiltrados);
   }
 }
