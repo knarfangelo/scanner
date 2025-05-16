@@ -21,7 +21,6 @@ form{
     background-color: #fff;
 }
 input{
-    border: 0.1vw solid gray;
     font-size: 1vw;
     box-sizing: border-box;
     padding: 0;
@@ -31,6 +30,10 @@ input{
 h4{
     margin: 0;
     font-size: 1.5vw;
+    border-bottom: 0.2vw solid #243E73;
+    margin-bottom: 1vw;
+}
+h5{
     border-bottom: 0.2vw solid #243E73;
     margin-bottom: 1vw;
 }
@@ -46,7 +49,6 @@ h3{
     justify-content: space-between;
 }
 .por-dni input{
-    border: 0.1vw solid gray;
     width: 14vw;
 }
 
@@ -79,6 +81,15 @@ h3{
     height: 1.5vw;
     font-size: 1vw;
     margin: 0;
+}
+
+form label input {
+border: 0.1vw gray solid;
+border-radius: 0.5vw;
+}
+form label select {
+border: 0.1vw gray solid;
+border-radius: 0.5vw;
 }
 
 .l-fedad{

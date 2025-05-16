@@ -1,0 +1,982 @@
+[
+  {
+    "id_prov": 1,
+    "provincia": "ANDAHUAYLAS",
+    "id_depa": 1
+  },
+  {
+    "id_prov": 2,
+    "provincia": "AYMARAES",
+    "id_depa": 1
+  },
+  {
+    "id_prov": 3,
+    "provincia": "ANTABAMBA",
+    "id_depa": 1
+  },
+  {
+    "id_prov": 4,
+    "provincia": "GRAU",
+    "id_depa": 1
+  },
+  {
+    "id_prov": 5,
+    "provincia": "COTABAMBAS",
+    "id_depa": 1
+  },
+  {
+    "id_prov": 6,
+    "provincia": "CHUMBIVILCAS",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 7,
+    "provincia": "CANAS",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 8,
+    "provincia": "CANCHIS",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 9,
+    "provincia": "ABANCAY",
+    "id_depa": 1
+  },
+  {
+    "id_prov": 10,
+    "provincia": "CARHUAZ",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 11,
+    "provincia": "ACOMAYO",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 12,
+    "provincia": "LUCANAS",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 13,
+    "provincia": "CHINCHEROS",
+    "id_depa": 1
+  },
+  {
+    "id_prov": 14,
+    "provincia": "PARINACOCHAS",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 15,
+    "provincia": "PARURO",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 16,
+    "provincia": "QUISPICANCHI",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 17,
+    "provincia": "CUSCO",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 18,
+    "provincia": "PAUCAR DEL SARA SARA",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 19,
+    "provincia": "HUANCA SANCOS",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 20,
+    "provincia": "SUCRE",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 21,
+    "provincia": "VICTOR FAJARDO",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 22,
+    "provincia": "BOLOGNESI",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 23,
+    "provincia": "ESPINAR",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 24,
+    "provincia": "HUAYTARA",
+    "id_depa": 5
+  },
+  {
+    "id_prov": 25,
+    "provincia": "PALPA",
+    "id_depa": 6
+  },
+  {
+    "id_prov": 26,
+    "provincia": "VILCAS HUAMAN",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 27,
+    "provincia": "ICA",
+    "id_depa": 6
+  },
+  {
+    "id_prov": 28,
+    "provincia": "LAMPA",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 29,
+    "provincia": "HUANCANE",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 30,
+    "provincia": "AZANGARO",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 31,
+    "provincia": "PISCO",
+    "id_depa": 6
+  },
+  {
+    "id_prov": 32,
+    "provincia": "MELGAR",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 33,
+    "provincia": "SAN ANTONIO DE PUTINA",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 34,
+    "provincia": "GENERAL SANCHEZ CERRO",
+    "id_depa": 8
+  },
+  {
+    "id_prov": 35,
+    "provincia": "SANDIA",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 36,
+    "provincia": "CARABAYA",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 37,
+    "provincia": "CAYLLOMA",
+    "id_depa": 9
+  },
+  {
+    "id_prov": 38,
+    "provincia": "CONDESUYOS",
+    "id_depa": 9
+  },
+  {
+    "id_prov": 39,
+    "provincia": "LA UNION",
+    "id_depa": 9
+  },
+  {
+    "id_prov": 40,
+    "provincia": "CANDARAVE",
+    "id_depa": 10
+  },
+  {
+    "id_prov": 41,
+    "provincia": "NASCA",
+    "id_depa": 6
+  },
+  {
+    "id_prov": 42,
+    "provincia": "YUNGUYO",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 43,
+    "provincia": "PUNO",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 44,
+    "provincia": "TACNA",
+    "id_depa": 10
+  },
+  {
+    "id_prov": 45,
+    "provincia": "JORGE BASADRE",
+    "id_depa": 10
+  },
+  {
+    "id_prov": 46,
+    "provincia": "MARISCAL NIETO",
+    "id_depa": 8
+  },
+  {
+    "id_prov": 47,
+    "provincia": "MOHO",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 48,
+    "provincia": "CAMANA",
+    "id_depa": 9
+  },
+  {
+    "id_prov": 49,
+    "provincia": "TARATA",
+    "id_depa": 10
+  },
+  {
+    "id_prov": 50,
+    "provincia": "ISLAY",
+    "id_depa": 9
+  },
+  {
+    "id_prov": 51,
+    "provincia": "HUANCAVELICA",
+    "id_depa": 5
+  },
+  {
+    "id_prov": 52,
+    "provincia": "AREQUIPA",
+    "id_depa": 9
+  },
+  {
+    "id_prov": 53,
+    "provincia": "EL COLLAO",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 54,
+    "provincia": "CHUCUITO",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 55,
+    "provincia": "HUANCAYO",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 56,
+    "provincia": "SAN ROMAN",
+    "id_depa": 7
+  },
+  {
+    "id_prov": 57,
+    "provincia": "CARAVELI",
+    "id_depa": 9
+  },
+  {
+    "id_prov": 58,
+    "provincia": "CASTILLA",
+    "id_depa": 9
+  },
+  {
+    "id_prov": 59,
+    "provincia": "ANTA",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 60,
+    "provincia": "LA MAR",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 61,
+    "provincia": "HUANTA",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 62,
+    "provincia": "LA CONVENCION",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 63,
+    "provincia": "TAYACAJA",
+    "id_depa": 5
+  },
+  {
+    "id_prov": 64,
+    "provincia": "CHUPACA",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 65,
+    "provincia": "HUAMANGA",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 66,
+    "provincia": "PAUCARTAMBO",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 67,
+    "provincia": "CONCEPCION",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 68,
+    "provincia": "CALCA",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 69,
+    "provincia": "URUBAMBA",
+    "id_depa": 2
+  },
+  {
+    "id_prov": 70,
+    "provincia": "CANGALLO",
+    "id_depa": 4
+  },
+  {
+    "id_prov": 71,
+    "provincia": "ACOBAMBA",
+    "id_depa": 5
+  },
+  {
+    "id_prov": 72,
+    "provincia": "JAUJA",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 73,
+    "provincia": "CASTROVIRREYNA",
+    "id_depa": 5
+  },
+  {
+    "id_prov": 74,
+    "provincia": "ANGARAES",
+    "id_depa": 5
+  },
+  {
+    "id_prov": 75,
+    "provincia": "CHINCHA",
+    "id_depa": 6
+  },
+  {
+    "id_prov": 76,
+    "provincia": "CHURCAMPA",
+    "id_depa": 5
+  },
+  {
+    "id_prov": 77,
+    "provincia": "YAULI",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 78,
+    "provincia": "TARMA",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 79,
+    "provincia": "SATIPO",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 80,
+    "provincia": "TAMBOPATA",
+    "id_depa": 12
+  },
+  {
+    "id_prov": 81,
+    "provincia": "MANU",
+    "id_depa": 12
+  },
+  {
+    "id_prov": 82,
+    "provincia": "TAHUAMANU",
+    "id_depa": 12
+  },
+  {
+    "id_prov": 83,
+    "provincia": "YAUYOS",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 84,
+    "provincia": "CAÑETE",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 85,
+    "provincia": "HUAROCHIRI",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 86,
+    "provincia": "CHANCHAMAYO",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 87,
+    "provincia": "HUARAL",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 88,
+    "provincia": "CHICLAYO",
+    "id_depa": 14
+  },
+  {
+    "id_prov": 89,
+    "provincia": "PUTUMAYO",
+    "id_depa": 15
+  },
+  {
+    "id_prov": 90,
+    "provincia": "RODRIGUEZ DE MENDOZA",
+    "id_depa": 16
+  },
+  {
+    "id_prov": 91,
+    "provincia": "LUYA",
+    "id_depa": 16
+  },
+  {
+    "id_prov": 92,
+    "provincia": "CHACHAPOYAS",
+    "id_depa": 16
+  },
+  {
+    "id_prov": 93,
+    "provincia": "CANTA",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 94,
+    "provincia": "YAROWILCA",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 95,
+    "provincia": "JUNIN",
+    "id_depa": 11
+  },
+  {
+    "id_prov": 96,
+    "provincia": "HUAURA",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 97,
+    "provincia": "HUANUCO",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 98,
+    "provincia": "PACHITEA",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 99,
+    "provincia": "LAURICOCHA",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 100,
+    "provincia": "HUAMALIES",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 101,
+    "provincia": "PUERTO INCA",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 102,
+    "provincia": "DOS DE MAYO",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 103,
+    "provincia": "HUACAYBAMBA",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 104,
+    "provincia": "MARAÑON",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 105,
+    "provincia": "PICOTA",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 106,
+    "provincia": "BELLAVISTA",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 107,
+    "provincia": "PASCO",
+    "id_depa": 19
+  },
+  {
+    "id_prov": 108,
+    "provincia": "SAN MARTIN",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 109,
+    "provincia": "LEONCIO PRADO",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 110,
+    "provincia": "AMBO",
+    "id_depa": 17
+  },
+  {
+    "id_prov": 111,
+    "provincia": "UCAYALI",
+    "id_depa": 15
+  },
+  {
+    "id_prov": 112,
+    "provincia": "DANIEL ALCIDES CARRION",
+    "id_depa": 19
+  },
+  {
+    "id_prov": 113,
+    "provincia": "TOCACHE",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 114,
+    "provincia": "MARISCAL CACERES",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 115,
+    "provincia": "HUALLAGA",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 116,
+    "provincia": "SAN MARCOS",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 117,
+    "provincia": "OXAPAMPA",
+    "id_depa": 19
+  },
+  {
+    "id_prov": 118,
+    "provincia": "CAJAMARCA",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 119,
+    "provincia": "CONTUMAZA",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 120,
+    "provincia": "SANCHEZ CARRION",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 121,
+    "provincia": "ASCOPE",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 122,
+    "provincia": "CELENDIN",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 123,
+    "provincia": "SANTIAGO DE CHUCO",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 124,
+    "provincia": "JULCAN",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 125,
+    "provincia": "SAN MIGUEL",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 126,
+    "provincia": "OTUZCO",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 127,
+    "provincia": "PACASMAYO",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 128,
+    "provincia": "VIRU",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 129,
+    "provincia": "SAN PABLO",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 130,
+    "provincia": "ATALAYA",
+    "id_depa": 22
+  },
+  {
+    "id_prov": 131,
+    "provincia": "CORONEL PORTILLO",
+    "id_depa": 22
+  },
+  {
+    "id_prov": 132,
+    "provincia": "PADRE ABAD",
+    "id_depa": 22
+  },
+  {
+    "id_prov": 133,
+    "provincia": "TRUJILLO",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 134,
+    "provincia": "EL DORADO",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 135,
+    "provincia": "BOLIVAR",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 136,
+    "provincia": "CAJABAMBA",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 137,
+    "provincia": "GRAN CHIMU",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 138,
+    "provincia": "LAMAS",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 139,
+    "provincia": "MOYOBAMBA",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 140,
+    "provincia": "PATAZ",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 141,
+    "provincia": "RIOJA",
+    "id_depa": 18
+  },
+  {
+    "id_prov": 142,
+    "provincia": "JAEN",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 143,
+    "provincia": "CUTERVO",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 144,
+    "provincia": "CHEPEN",
+    "id_depa": 21
+  },
+  {
+    "id_prov": 145,
+    "provincia": "SAN IGNACIO",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 146,
+    "provincia": "PURUS",
+    "id_depa": 22
+  },
+  {
+    "id_prov": 147,
+    "provincia": "OYON",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 148,
+    "provincia": "ANTONIO RAYMONDI",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 149,
+    "provincia": "HUAYLAS",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 150,
+    "provincia": "BONGARA",
+    "id_depa": 16
+  },
+  {
+    "id_prov": 151,
+    "provincia": "CORONGO",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 152,
+    "provincia": "BAGUA",
+    "id_depa": 16
+  },
+  {
+    "id_prov": 153,
+    "provincia": "CONDORCANQUI",
+    "id_depa": 16
+  },
+  {
+    "id_prov": 154,
+    "provincia": "REQUENA",
+    "id_depa": 15
+  },
+  {
+    "id_prov": 155,
+    "provincia": "DATEM DEL MARAÑON",
+    "id_depa": 15
+  },
+  {
+    "id_prov": 156,
+    "provincia": "MAYNAS",
+    "id_depa": 15
+  },
+  {
+    "id_prov": 157,
+    "provincia": "OCROS",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 158,
+    "provincia": "HUARI",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 159,
+    "provincia": "AIJA",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 160,
+    "provincia": "HUARMEY",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 161,
+    "provincia": "CASMA",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 162,
+    "provincia": "HUARAZ",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 163,
+    "provincia": "RECUAY",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 164,
+    "provincia": "ASUNCION",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 165,
+    "provincia": "YUNGAY",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 166,
+    "provincia": "CARLOS FERMIN FITZCARRALD",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 167,
+    "provincia": "SANTA",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 168,
+    "provincia": "MARISCAL LUZURIAGA",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 169,
+    "provincia": "CAJATAMBO",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 170,
+    "provincia": "PALLASCA",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 171,
+    "provincia": "POMABAMBA",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 172,
+    "provincia": "SIHUAS",
+    "id_depa": 3
+  },
+  {
+    "id_prov": 173,
+    "provincia": "BARRANCA",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 174,
+    "provincia": "UTCUBAMBA",
+    "id_depa": 16
+  },
+  {
+    "id_prov": 175,
+    "provincia": "ZARUMILLA",
+    "id_depa": 23
+  },
+  {
+    "id_prov": 176,
+    "provincia": "ALTO AMAZONAS",
+    "id_depa": 15
+  },
+  {
+    "id_prov": 177,
+    "provincia": "LORETO",
+    "id_depa": 15
+  },
+  {
+    "id_prov": 178,
+    "provincia": "MARISCAL RAMON CASTILLA",
+    "id_depa": 15
+  },
+  {
+    "id_prov": 179,
+    "provincia": "CHOTA",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 180,
+    "provincia": "SANTA CRUZ",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 181,
+    "provincia": "TUMBES",
+    "id_depa": 23
+  },
+  {
+    "id_prov": 182,
+    "provincia": "CONTRALMIRANTE VILLAR",
+    "id_depa": 23
+  },
+  {
+    "id_prov": 183,
+    "provincia": "HUALGAYOC",
+    "id_depa": 20
+  },
+  {
+    "id_prov": 184,
+    "provincia": "LAMBAYEQUE",
+    "id_depa": 14
+  },
+  {
+    "id_prov": 185,
+    "provincia": "SECHURA",
+    "id_depa": 24
+  },
+  {
+    "id_prov": 186,
+    "provincia": "FERREÑAFE",
+    "id_depa": 14
+  },
+  {
+    "id_prov": 187,
+    "provincia": "MORROPON",
+    "id_depa": 24
+  },
+  {
+    "id_prov": 188,
+    "provincia": "HUANCABAMBA",
+    "id_depa": 24
+  },
+  {
+    "id_prov": 189,
+    "provincia": "SULLANA",
+    "id_depa": 24
+  },
+  {
+    "id_prov": 190,
+    "provincia": "AYABACA",
+    "id_depa": 24
+  },
+  {
+    "id_prov": 191,
+    "provincia": "PAITA",
+    "id_depa": 24
+  },
+  {
+    "id_prov": 192,
+    "provincia": "PIURA",
+    "id_depa": 24
+  },
+  {
+    "id_prov": 193,
+    "provincia": "TALARA",
+    "id_depa": 24
+  },
+  {
+    "id_prov": 194,
+    "provincia": "CALLAO",
+    "id_depa": 25
+  },
+  {
+    "id_prov": 195,
+    "provincia": "LIMA",
+    "id_depa": 13
+  },
+  {
+    "id_prov": 196,
+    "provincia": "ILO",
+    "id_depa": 8
+  }
+]

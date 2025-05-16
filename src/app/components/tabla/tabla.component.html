@@ -8,12 +8,15 @@
     <div class="datos-consulta">
       <h4>Total de registros = {{formatNumberToHundreds(totalRecords)}}</h4>
       <div class="pagination">
-        <button *ngFor="let page of pageButtons"
-                [disabled]="page === filters.page || page === -1"
-                (click)="goToPage(page)"
-                [ngClass]="{'active': page === activePage}">
-          {{ page === -1 ? '...' : page }}
-        </button>
+<button *ngFor="let page of pageButtons"
+        [disabled]="page === filters.page || page === -1"
+        (click)="goToPage(page)"
+        [ngClass]="{
+          'active': page === activePage,
+          'arrow-button': page === -1
+        }">
+  {{ page === -1 ? '▶' : page }}
+</button>
       </div>      
     </div>
   <table class="table table-bordered">

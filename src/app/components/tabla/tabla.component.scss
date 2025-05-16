@@ -31,13 +31,17 @@ tr{
 .datos-consulta h4{
     margin: 0;
 }
-th{
-    font-size: 1.5vw;  
+th {
+    font-size: 0.5vw; 
+    font-weight: lighter; 
     border: 0.1vw solid #fff;
     color: #fff;
     cursor: pointer;
-    background: #243E73
+    background: #243E73;
+    text-align: center;        /* Alinea horizontalmente */
+    vertical-align: middle;    /* Alinea verticalmente */
 }
+
 th, td{
     padding: 0.5vw;
     font-size: 1.0vw;
@@ -76,16 +80,19 @@ td{
 
   .pagination{
     display: flex;
+    border-radius: 0.5vw;
     position: fixed;
-    margin-left: 43vw;
-    background-color: #3064d4;
+    margin-left: 42.5vw;
+    background-color: #f7b521;
   }
  /* Clase para los botones */
 .pagination button {
     padding: 1vw;
+        border-radius: 0.5vw;
     margin: 1vw;
     border: 1px solid #fff;
     cursor: pointer;
+    background-color: #fff !important;
   }
 
   .pagination button:disabled {
@@ -96,13 +103,19 @@ td{
   
   /* Clase para el botón activo */
   .pagination button.active {
-    background-color: #243E73;
+    background-color: #243E73 !important;
     color: #fff;
   }
-  
+
+
   /* Clase para los botones deshabilitados */
   .pagination button:disabled {
     cursor: not-allowed;
+    color: #fff !important;
+  }
+    .pagination button.arrow-button {
+    background-color: #fff !important; /* Fondo oscuro */
+    color: #000 !important;
   }
   
   /* Animación del spinner */

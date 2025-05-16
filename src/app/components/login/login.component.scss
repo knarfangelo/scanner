@@ -88,7 +88,7 @@ input {
 }
 
 .login-button {
-  background-color: #E5057C;
+  background-color: #173F94;
   color: #FFFFFF;
   border: none;
   padding: 14px;
@@ -100,7 +100,7 @@ input {
   margin-top: 10px;
 
   &:hover {
-    background-color: darken(#E5057C, 10%);
+    background-color: darken(#173F94, 20%);
     transform: translateY(-2px);
   }
 

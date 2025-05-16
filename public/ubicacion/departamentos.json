@@ -1,0 +1,102 @@
+[
+  {
+    "id_depa": 1,
+    "departamento": "APURIMAC"
+  },
+  {
+    "id_depa": 2,
+    "departamento": "CUSCO"
+  },
+  {
+    "id_depa": 3,
+    "departamento": "ANCASH"
+  },
+  {
+    "id_depa": 4,
+    "departamento": "AYACUCHO"
+  },
+  {
+    "id_depa": 5,
+    "departamento": "HUANCAVELICA"
+  },
+  {
+    "id_depa": 6,
+    "departamento": "ICA"
+  },
+  {
+    "id_depa": 7,
+    "departamento": "PUNO"
+  },
+  {
+    "id_depa": 8,
+    "departamento": "MOQUEGUA"
+  },
+  {
+    "id_depa": 9,
+    "departamento": "AREQUIPA"
+  },
+  {
+    "id_depa": 10,
+    "departamento": "TACNA"
+  },
+  {
+    "id_depa": 11,
+    "departamento": "JUNIN"
+  },
+  {
+    "id_depa": 12,
+    "departamento": "MADRE DE DIOS"
+  },
+  {
+    "id_depa": 13,
+    "departamento": "LIMA"
+  },
+  {
+    "id_depa": 14,
+    "departamento": "LAMBAYEQUE"
+  },
+  {
+    "id_depa": 15,
+    "departamento": "LORETO"
+  },
+  {
+    "id_depa": 16,
+    "departamento": "AMAZONAS"
+  },
+  {
+    "id_depa": 17,
+    "departamento": "HUANUCO"
+  },
+  {
+    "id_depa": 18,
+    "departamento": "SAN MARTIN"
+  },
+  {
+    "id_depa": 19,
+    "departamento": "PASCO"
+  },
+  {
+    "id_depa": 20,
+    "departamento": "CAJAMARCA"
+  },
+  {
+    "id_depa": 21,
+    "departamento": "LA LIBERTAD"
+  },
+  {
+    "id_depa": 22,
+    "departamento": "UCAYALI"
+  },
+  {
+    "id_depa": 23,
+    "departamento": "TUMBES"
+  },
+  {
+    "id_depa": 24,
+    "departamento": "PIURA"
+  },
+  {
+    "id_depa": 25,
+    "departamento": "CALLAO"
+  }
+]
